@@ -36,6 +36,26 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    flavorDimensions 'version'
+
+    productFlavors {
+        Pro {
+            dimension 'version'
+            minSdk 24
+            targetSdk 31
+            compileSdk 31
+            applicationId "com.example.testbuildtypes_pro"
+        }
+        Free {
+            dimension 'version'
+            minSdk 24
+            targetSdk 30
+            compileSdk 31
+            applicationId "com.example.testbuildtypes_free"
+        }
+
+    }
 }
 
 dependencies {
